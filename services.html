@@ -1,0 +1,455 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Yayshesaidyes</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Developed by Team 1" />
+	<meta name="keywords" content="wedding, couple, marriage, services" />
+	<meta name="author" content="Team 1 - Titus" />
+
+
+  	<!-- Facebook and Twitter integration -->
+	<meta property="og:title" content=""/>
+	<meta property="og:image" content=""/>
+	<meta property="og:url" content=""/>
+	<meta property="og:site_name" content=""/>
+	<meta property="og:description" content=""/>
+	<meta name="twitter:title" content="" />
+	<meta name="twitter:image" content="" />
+	<meta name="twitter:url" content="" />
+	<meta name="twitter:card" content="" />
+	
+	<!--Bootstrap and Google API for font and glyphicons-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<!-- <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'> -->
+	<link rel="icon" type="image/png" href="images/logo.png"/>
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+	<!-- Theme style  -->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css?family=GFS+Didot" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"> 
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+	
+	<!--Connecting to firebase and db services-->
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase-firestore.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/init.js"></script>
+	<script src="js/db.js"></script>
+	<script src="js/services_effects.js"></script>
+	<script>
+	<!--Function to aggregate services selected by the user-->
+	services=[]
+	function addToCart(selected_service, id){
+	
+		document.getElementById(id).disabled=true;
+		services.push(selected_service);	
+		
+		}
+	
+
+	
+	</script>
+	
+	<!--Read and Write data-->
+   <script>
+	writeServicesData("Emily Croone Photography", "Photography", "Austin, Texas","$1,000-$2,000","photography1.jpg","+1 (987) 897-6777","http://www.facebook.com","www.instagram.com","As your photographer I will be with you every step of the journey, from the giddy yes! to the heart-filled-I do. My desire is to joyfully walk alongside you as you prepare for the happiest day of your life, and give you an absolutely joy-filled, bright, beautiful gallery of photos that will forever remind you of all the details, the people, and the moments that sent you off on your grandest adventure yet: your marriage.")
+	writeServicesData("Radison Bickam Photography", "Photography", "Missouri","$3,000-$4,000","photography2.jpg","+1 (987) 897-6778","www.facebook.com","www.instagram.com","Your big day is our big day! We love everything about weddings; from the small details to the big moments! Because we were once brides ourselves, we know how to relate to our brides and meet their expectations for all the things that need to be photographed! We have a relaxed style where we want you to enjoy the day and not worry about the photos. So let us be a part of your beautiful journey.")
+	writeServicesData("Tony Picas Photography", "Photography", "Santa Barbara, CA","$5,000-$6,000","photography3.jpg","+1 (123) 456-7891","www.facebook.com","www.instagram.com","When it comes to capturing your beautiful love story, You want to hire the best not only in photography but in attention to details. When we do your engagement portraits it allows us to get to know each other, know your likes and preferences, at the same time you get to enjoy a much needed time with your honey before the big day. Visit our website or send us a message we can't wait to get to know you! ")
+	writeServicesData("The Posh Affair", "Catering", "Houston, TX","$20-$60 per person","catering1.jpg","+1 (987) 897-6777","http://www.facebook.com","www.instagram.com","The Posh Affair is a boutique, full-service catering + event planning company committed to bringing you our absolute very best! We invite you to let us serve, inspire and assist you in creating the environment and cuisine that will influence your own Posh Affair- your Wedding!")
+	writeServicesData("Cafe Natalie", "Catering", "Conroe, TX","$70-$100 per person","catering2.jpg","+1 (987) 897-6778","www.facebook.com","www.instagram.com","From formal to free-spirited, backyard to ballroom, Cafe Natalie can help you, your loved ones celebrate any milestone. Our talented team will work tirelessly to perfect your vision. Our attention to detail and devotion to every detail will allow you to compose a flawless event. ")
+	writeServicesData("Sophisticated Delights", "Catering", "Sugar Land, TX","$50-$80 per person","catering3.jpg","+1 (987) 897-6778","www.facebook.com","www.instagram.com","Love is such a simple word but so hard to give everyone. Our twists on traditional classics allow us to provide so much love and happiness with our food. We pride ourselves on making sure your catering experience is as sophisticated as possible by adding delight in every bite!")
+	writeServicesData("Peach Creek Ranch", "Venue", "College Station, TX","$2,000-3,000","venue3.jpeg","+1 (987) 897-6778","www.facebook.com","www.instagram.com","Welcome to Peach Creek Ranch - Bryan/College Station's premier wedding and event venue.We are here to make sure choosing your wedding venue is the easiest decision you'll make. From our excellent rain plan to our on-site lodging to our included day-of-coordination services, we are here to make your wedding day as wonderful and care free as it can be!")
+	writeServicesData("Horseshoe Bay Resort", "Venue", "Horseshoe Bay, TX","$5,000-$8,000","venue1.jpg","+1 (987) 897-6777","http://www.facebook.com","www.instagram.com","This scenic resort on the shores of Lake LBJ is so lush you’ll forget you’re in the center of the Lone Star State. The only giveaway will be the famous southern hospitality you’ll be treated to.Once the “I DOs” are done, move your party onto the lake. Be sure to wave to the folks on shore as you sail off into the sunset with your nearest and dearest.")
+	writeServicesData("Milltown Hostoric District","Venue","Santa Monica, CA","$10,000-$12,000","venue2.jpg","+1 (987) 897-6778","www.facebook.com","www.instagram.com","Experience a dreamy, perfect wedding day at the Milltown Historic District. The district is comprised of three different venues: The Gallery, The Grande Ballroom, and The River Venue.It’s rustic, quaint, and historic, possessing its original wood floors. There’s a peaceful courtyard for the ceremony which can be followed by the reception in The Gallery. ")
+	readCateringData();
+	readPhotographyData();
+	readVenueData();
+	</script>
+
+
+	
+
+	</head>
+    <div class="fh5co-loader"></div>
+
+
+	
+	
+<nav class="navbar navbar-inverse">
+	<div class="container">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-4">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="index.html">Yayshesaidyes!</a>
+		</div>
+
+		<!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="navbar-collapse-4">
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="index.html">Home</a></li>
+				<li><a href="about.html">About</a></li>
+				<li><a href="services.html">Services</a></li>
+				<li><a href="view_cart.html" onclick="location.href=this.href+'?key='+services;return false;">My Plans</a></li>
+
+				<ul class=" nav navbar-nav nav-collapse slide-down" role="search" >
+
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle btn btn-default btn-outline btn-circle collapsed" data-toggle="dropdown" role="button" aria-expanded="false">Profile </a>
+						<ul class="dropdown-menu" role="menu">
+							<li id="logregister"><a href="signin.html">Sign In</a></li>
+							<li id="logregister1"><a href="signup.html">Register</a></li>
+							<li id="logout"><a href="signin.html" onclick="logout()">Logout</a></li>
+							<li id="logout1"><a href="view_cart.html" onclick="location.href=this.href+'?key='+services;return false;">My Plans</a></li>
+							<li id="vendor_service"><a href="vendor_reg.html" >Submit Service</a></li>
+						</ul>
+					</li>
+				</ul>
+				<li id="loggedin"><a href="signup.html">Profile</a></li>
+			</ul>
+
+		</div><!-- /.navbar-collapse -->
+	</div><!-- /.container -->
+</nav><!-- /.navbar -->
+
+	<!--Welcome header section-->
+    <body  onload="caller();">
+	<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(images/bg.jpg);">
+	<!--	<div class="overlay"></div> -->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+							<h1>Wedding Planner</h1>
+							<h2>We'll plan it the way you'll love it</a></h2>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	
+	<!--Photography services section-->
+		<div id="photography">
+		<div id="cupid">
+		<center>
+			<div id = "photography" style="display:block" >
+				 		 <h2 style="padding-top: 10px">Photography</h2>
+					</div>
+			<img src="images/shooting_cupid.gif"></img>
+			<p>You framed each other, time to shoot it now!</p>
+		</center>
+		</div>
+		<center>
+		<div>
+		<div id="carousel">
+		<div id="carousel-example-generic1" class="carousel slide" data-ride="carousel">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators"></ol>
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner photography"></div>
+			  <!-- Controls -->
+			  <a class="left carousel-control" href="#carousel-example-generic" data-slide="prev">
+				<span class="glyphicon glyphicon-chevron-left"></span>
+			  </a>
+			  <a class="right carousel-control" href="#carousel-example-generic" data-slide="next">
+				<span class="glyphicon glyphicon-chevron-right"></span>
+			  </a>
+			</div>
+		</div>
+		</div>
+		</center>
+	</div>
+
+    <br></br>
+
+	
+	<!--Catering services section-->
+	<div id="fh5co-started">
+		<div id="cupid">
+		<center>
+			<img src="images/eating_cupid.gif"></img>
+			<p style="color:white">Ssssshhh, I know your first love is food!</p>
+		</center>
+		</div>
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+				<center>
+					<h2>Catering</h2>
+					</center>
+				</div>
+			</div>
+
+			<div class="card-deck" id="catering">
+			 
+			   <div class="col-sm-4">
+			   <div class="card">
+				<img class="card-img-top" id="catering_image1" alt="Photography">
+				<div class="card-body">
+				  <center><h4 class="card-title" id="catering_service_name1"></h4>
+				  <h5 class="card-subtitle mb-2 text-muted" id="catering_location1"></h5>
+				  <p class="card-text" id="catering_price_range1"><small class="text-muted"></small></p></center>
+				  <p class="card-text" id="catering_description1"></p>
+				  <center>
+					  <a href="#" id="catering_facebook1"><img src="images/facebook.png" style="height:1.5em"></img></a>
+					  <a href="#" id="catering_instagram1"><img src="images/instagram.jpg" style="height:2em"></img></a>
+				  </center>
+				  
+				</div>
+				<div class="card-footer"><center>
+					<button type="button" class="btn btn-info btn-lg" style="background-color:#5bc0de" id="catering_cart1" onclick="addToCart(this.name, this.id)">
+					  <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+					</button></center>
+				</div>
+				</div>
+				</div>
+			  	  
+				   <div class="col-sm-4">
+				    <div class="card">
+				<img class="card-img-top" id="catering_image2" alt="Photography">
+				<div class="card-body">
+				  <center><h4 class="card-title" id="catering_service_name2"></h4>
+				  <h5 class="card-subtitle mb-2 text-muted" id="catering_location2"></h5>
+				  <p class="card-text" id="catering_price_range2"><small class="text-muted"></small></p></center>
+				  <p class="card-text" id="catering_description2"></p>
+				  <center>
+					  <a href="#" id="catering_facebook2"><img src="images/facebook.png" style="height:1.5em"></img></a>
+					  <a href="#" id="catering_instagram2"><img src="images/instagram.jpg" style="height:2em"></img></a>
+				  </center>
+				  
+				</div>
+				<div class="card-footer"><center>
+					<button type="button" class="btn btn-info btn-lg" style="background-color:#5bc0de" id="catering_cart2" onclick="addToCart(this.name, this.id)">
+					  <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+					</button></center>
+				</div>
+				</div>
+			  </div>
+			  	 
+				   <div class="col-sm-4">
+				    <div class="card">
+				<img class="card-img-top" id="catering_image3" alt="Photography">
+				<div class="card-body">
+				  <center><h4 class="card-title" id="catering_service_name3"></h4>
+				  <h5 class="card-subtitle mb-2 text-muted" id="catering_location3"></h5>
+				  <p class="card-text" id="catering_price_range3"><small class="text-muted"></small></p></center>
+				  <p class="card-text" id="catering_description3"></p>
+				  <center>
+					  <a href="#" id="catering_facebook3"><img src="images/facebook.png" style="height:1.5em"></img></a>
+					  <a href="#" id="catering_instagram3"><img src="images/instagram.jpg" style="height:2em"></img></a>
+				  </center>
+				  
+				</div>
+				<div class="card-footer"><center>
+					<button type="button" class="btn btn-info btn-lg" style="background-color:#5bc0de" id="catering_cart3" onclick="addToCart(this.name, this.id)">
+					  <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+					</center></button>
+				</div>
+				</div>
+			  </div>
+		
+		
+			   
+			</div>
+			
+		</div>
+	</div>
+
+	<!--Venue services section-->
+		<div id="cupid">
+			<center>
+				<img src="images/venue_cupid.gif"></img>
+				<p style="color:black">You are pretty but the venue needs it!</p>
+			</center>
+		</div>
+	<div class="container-fluid text-center bg-grey" style="padding-top: 10px">
+				
+					<div id = "photography" style="display:block" >
+				 		 <h2 style="padding-top: 10px">Decor</h2>
+					</div>
+
+				 	<div class="card-deck" id="venue">
+			 
+			   <div class="col-sm-4">
+			   <div class="card">
+				<img class="card-img-top" id="venue_image1" alt="Photography">
+				<div class="card-body">
+				  <center><h4 class="card-title" id="venue_service_name1"></h4>
+				  <h5 class="card-subtitle mb-2 text-muted" id="venue_location1"></h5>
+				  <p class="card-text" id="venue_price_range1"><small class="text-muted"></small></p></center>
+				  <p class="card-text" id="venue_description1"></p>
+				  <center>
+					  <a href="#" id="venue_facebook1"><img src="images/facebook.png" style="height:1.5em"></img></a>
+					  <a href="#" id="venue_instagram1"><img src="images/instagram.jpg" style="height:2em"></img></a>
+				  </center>
+				  
+				</div>
+				<div class="card-footer">
+					<button type="button" class="btn btn-info btn-lg" id="venue_cart1" onclick="addToCart(this.name, this.id)">
+					  <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+					</button>
+				</div>
+				</div>
+			  </div>
+			  	  
+				   <div class="col-sm-4">
+				    <div class="card">
+				<img class="card-img-top" id="venue_image2" alt="Photography">
+				<div class="card-body">
+				  <center><h4 class="card-title" id="venue_service_name2"></h4>
+				  <h5 class="card-subtitle mb-2 text-muted" id="venue_location2"></h5>
+				  <p class="card-text" id="venue_price_range2"><small class="text-muted"></small></p></center>
+				  <p class="card-text" id="venue_description2"></p>
+				  <center>
+					  <a href="#" id="venue_facebook2"><img src="images/facebook.png" style="height:1.5em"></img></a>
+					  <a href="#" id="venue_instagram2"><img src="images/instagram.jpg" style="height:2em"></img></a>
+				  </center>
+				  
+				</div>
+				<div class="card-footer">
+					<button type="button" class="btn btn-info btn-lg" id="venue_cart2" onclick="addToCart(this.name, this.id)">
+					  <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+					</button>
+				</div>
+				</div>
+			  </div>
+			  	 
+				   <div class="col-sm-4">
+				    <div class="card">
+				<img class="card-img-top" id="venue_image3" alt="Photography">
+				<div class="card-body">
+				  <center><h4 class="card-title" id="venue_service_name3"></h4>
+				  <h5 class="card-subtitle mb-2 text-muted" id="venue_location3"></h5>
+				  <p class="card-text" id="venue_price_range3"><small class="text-muted"></small></p></center>
+				  <p class="card-text" id="venue_description3"></p>
+				  <center>
+					  <a href="#" id="venue_facebook3"><img src="images/facebook.png" style="height:1.5em"></img></a>
+					  <a href="#" id="venue_instagram3"><img src="images/instagram.jpg" style="height:2em"></img></a>
+				  </center>
+				  
+				</div>
+				<div class="card-footer">
+					<button type="button" class="btn btn-info btn-lg" id="venue_cart3" onclick="addToCart(this.name, this.id)">
+					  <span class="glyphicon glyphicon-shopping-cart"></span> Add to Cart
+					</button>
+				</div>
+				</div>
+			  </div>
+		
+		
+			   
+			</div>
+				</div>
+
+
+<!--Footer section-->
+	<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-4 fh5co-widget">
+					<h3>The Company</h3>
+					<p>Yayshesaidyes.com is a one-stop wedding planner solution for all those couples who wish to plan their dream wedding without getting bogged down by running around to arrange for services like catering, photography</p>
+					<p><a href="about.html">Learn More</a></p>
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<ul class="fh5co-footer-links">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+
+
+					</ul>
+				</div>
+
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<ul class="fh5co-footer-links">
+
+						<li><a href="services.html">Services</a></li>
+						<li><a href="work.html">Testimonials</a></li>
+
+					</ul>
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1" id="container3">
+
+					<img style="width:150%; float:right" src="./images/logo.gif" alt="Cupid"  loop="infinite" >
+
+
+
+				</div>
+
+
+			</div>
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; Developed by Team 1.</small>
+
+					</p>
+					<p>
+					<ul class="fh5co-social-icons">
+						<li><a href="#"><i class="icon-twitter"></i></a></li>
+						<li><a href="#"><i class="icon-facebook"></i></a></li>
+						<li><a href="#"><i class="icon-linkedin"></i></a></li>
+
+					</ul>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	<script src="js/app.js"></script>
+	<script src="js/login.js"></script>
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	</body>
+</html>
+

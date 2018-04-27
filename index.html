@@ -1,0 +1,334 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Yayshesaidyes</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Developed by Team 1" />
+	<meta name="keywords" content="wedding, couple, marriage, services" />
+	<meta name="author" content="Team 1 - Joe" />
+
+
+
+
+
+	<!-- <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'> -->
+
+	<link rel="icon" type="image/png" href="images/logo1.png"/>
+
+
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<link href="https://fonts.googleapis.com/css?family=GFS+Didot" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+	
+		<link href="https://fonts.googleapis.com/css?family=GFS+Didot" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet"> 
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase-firestore.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/db.js"></script>
+
+	<!-- Modernizr JS -->
+	<script src="js/modernizr-2.6.2.min.js"></script>
+	<!-- FOR IE9 below -->
+	<!--[if lt IE 9]>
+	<script src="js/respond.min.js"></script>
+	<![endif]-->
+<script> readTestimonialData()</script>
+</head>
+<body>
+
+<div class="fh5co-loader"></div>
+
+
+<nav class="navbar navbar-inverse">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-4">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html">Yayshesaidyes!</a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="navbar-collapse-4">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+
+                <ul class=" nav navbar-nav nav-collapse slide-down" role="search" >
+
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle btn btn-default btn-outline btn-circle collapsed" data-toggle="dropdown" role="button" aria-expanded="false">Profile </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li id="logregister"><a href="signin.html">Sign In</a></li>
+                            <li id="logregister1"><a href="signup.html">Register</a></li>
+                            <li id="logout"><a href="signin.html" onclick="logout()">Logout</a></li>
+                            <li id="logout1"><a href="view_cart.html" >My Plans</a></li>
+                            <li id="vendor_service"><a href="vendor_reg.html" >Submit Service</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <li id="loggedin"><a href="signup.html">Profile</a></li>
+            </ul>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container -->
+</nav><!-- /.navbar -->
+
+	<header id="fh5co-header" class="fh5co-cover fh5co-cover-sm" role="banner" style="background-image:url(images/homepage.jpg);opacity:0.9">
+		<!--<div class="overlay"></div>-->
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 col-md-offset-1 text-center">
+					<div class="display-t">
+						<div class="display-tc animate-box" data-animate-effect="fadeIn">
+
+							<h2>Rated #1 as best wedding planners across North America</h2>
+							<p><a href="services.html" class="btn btn-default">Plan your big day</a></p>
+						</div>
+					</div>
+				</div>
+			</div>
+			</div>
+		
+	</header>
+	
+	
+
+	<div id="fh5co-testimonial">
+		<div class="container">	
+			<div class="row">
+				<div class="project">
+					<div class="col-md-8 col-md-push-5 animate-box" data-animate-effect="fadeInLeft">
+						<img class="img-responsive" src="images/1.jpg"  alt="work">
+					</div>
+					<div class="col-md-4 col-md-pull-8 animate-box" data-animate-effect="fadeInLeft">
+						<div class="mt">
+							<h3>Services Offered</h3>
+							<p>From helping you find your perfect venue, to managing all your vendors, creating your overall wedding style to designing your floral designs and décor, selecting cuisine to stationery design~ we take care of it all! We do everything for you. Together we will collaborate with you to create a stylish unique wedding affair that is true to your personality! </p>
+							<ul class="list-nav">
+								<li><i class="icon-check"></i>Destination Weddings</li>
+								<li><i class="icon-check"></i>Themed Weddings</li>
+								<li><i class="icon-check"></i>Select from different packages</li>
+							</ul>
+						</div>
+					</div>
+				</div>				
+			</div>
+		</div>
+	</div>
+	
+	<div id="fh5co-portfolio">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center fh5co-heading">
+					<h2>Testimonials</h2>
+						<p><a href="testimonial.html" class="btn btn-default" style="background-color: #4CAF50; border: none;color: white; padding: 15px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;cursor: pointer;">Submit your story</a></p>
+				</div>
+			
+
+			</div>
+			<div class="row">
+				<div class="col-md-4 animate-box">
+					<div class="testimony">
+						<blockquote id="testimonial_description1">
+							
+						</blockquote>
+						<p class="author" id="testimonial_name1"><cite></cite></p>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="testimony">
+						<blockquote id="testimonial_description2">
+							
+						</blockquote>
+						<p class="author" id="testimonial_name2"><cite></cite></p>
+					</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="testimony">
+						<blockquote id="testimonial_description3">
+							
+						</blockquote>
+						<p class="author" id="testimonial_name3"><cite></cite></p>
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+
+	
+	
+
+	
+
+	
+
+	<div id="fh5co-started">
+		<div id="fh5co-portfolio">
+		<div class="container">
+			
+			<div class="row">
+				<div class="col-md-4 animate-box">
+					<div class="col-third">
+							<div class="col-md-12">
+								
+								<div class="desc" style="color:white">
+									<h3>Find Vendors</h3>
+									<p>Learn more about services rendered by our very reliable vendors and how to get in touch...</p>
+									<p><a href="#" class="btn btn-primary">Learn More</a></p>
+								</div>
+							</div>
+						</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="col-third">
+							<div class="col-md-12">
+								
+								<div class="desc" style="color:white">
+									<h3>Attract Customers</h3>
+									<p>Our exhaustive list of customers looking to get the best wedding plans we provide the best services....</p>
+									<p><a href="#" class="btn btn-primary">Learn More</a></p>
+								</div>
+							</div>
+						</div>
+				</div>
+				<div class="col-md-4 animate-box">
+					<div class="col-third">
+							<div class="col-md-12">
+								
+								<div class="desc" style="color:white">
+									<h3>Themed Weddings</h3>
+									<p>We deliver results according to your requirements. Let us know your likings and our designers will take it forward..</p>
+									<p><a href="#" class="btn btn-primary">Learn More</a></p>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</div>
+
+	<div id="fh5co-portfolio">
+		<div class="container">
+			<div class="row animate-box">
+				<div class="col-md-8 col-md-offset-2 text-center  ">
+					<h2>All Services 100% guaranteed</h2>
+					<p>We are here to provide fresh ideas, innovative styling and creative inputs to pull your dream wedding together!
+						We know you need a team of experienced wedding planners to take your vision and make it a reality. When you are planning something as special as a wedding, it’s important to have the right people behind you, people who are just as enthusiastic as you are about creating a wedding that perfectly captures the essence of your relationship. </p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+
+		<footer id="fh5co-footer" role="contentinfo">
+			<div class="container">
+				<div class="row row-pb-md">
+					<div class="col-md-4 fh5co-widget">
+						<h3>The Company</h3>
+						<p>Yayshesaidyes.com is a one-stop wedding planner solution for all those couples who wish to plan their dream wedding without getting bogged down by running around to arrange for services like catering, photography</p>
+						<p><a href="about.html">Learn More</a></p>
+					</div>
+					<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+						<ul class="fh5co-footer-links">
+							<li><a href="index.html">Home</a></li>
+							<li><a href="about.html">About</a></li>
+							<li><a href="contact.html">Contact</a></li>
+
+
+						</ul>
+					</div>
+
+					<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+						<ul class="fh5co-footer-links">
+
+							<li><a href="services.html">Services</a></li>
+							<li><a href="work.html">Testimonials</a></li>
+
+						</ul>
+					</div>
+					<div id="container3">
+
+						<img src="./images/logo.gif" alt="Cupid"  loop="infinite" >
+
+					</div>
+
+
+				</div>
+
+				<div class="row copyright">
+					<div class="col-md-12 text-center">
+						<p>
+							<small class="block">&copy; Developed by Team 1.</small>
+
+						</p>
+						<p>
+						<ul class="fh5co-social-icons">
+							<li><a href="#"><i class="icon-twitter"></i></a></li>
+							<li><a href="#"><i class="icon-facebook"></i></a></li>
+							<li><a href="#"><i class="icon-linkedin"></i></a></li>
+
+						</ul>
+						</p>
+					</div>
+				</div>
+
+			</div>
+		</footer>
+	</div>
+
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+	<script src="js/app.js"></script>
+
+
+	<!-- jQuery -->
+	<script src="js/jquery.min.js"></script>
+	<!-- jQuery Easing -->
+	<script src="js/jquery.easing.1.3.js"></script>
+	<!-- Bootstrap -->
+	<script src="js/bootstrap.min.js"></script>
+	<!-- Waypoints -->
+	<script src="js/jquery.waypoints.min.js"></script>
+	<!-- countTo -->
+	<script src="js/jquery.countTo.js"></script>
+	<!-- Magnific Popup -->
+	<script src="js/jquery.magnific-popup.min.js"></script>
+	<script src="js/magnific-popup-options.js"></script>
+	<!-- Main -->
+	<script src="js/main.js"></script>
+
+	<script src="js/login.js"></script>
+	<script src="js/changecupid.js"></script>
+
+	</body>
+</html>
+

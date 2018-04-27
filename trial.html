@@ -1,0 +1,41 @@
+<html>
+	<head>
+		<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase-firestore.js"></script>
+		<script src="js/config.js"></script>
+		<script src="js/db.js"></script>
+		<script>
+	
+			var uploadImage=function(){
+			       var file    = document.querySelector('input[type=file]').files[0]; //sames as here
+					var filename=document.querySelector('input[type=file]').files[0].name; 
+			var uploadTask = storageRef.child('images/'+filename).put(file, metadata);
+			uploadTask.on('state_changed', function(snapshot){
+			  // Observe state change events such as progress, pause, and resume
+			  // Get task progress, including the number of bytes uploaded and the total number of bytes to be uploaded
+			  var progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
+			  console.log('Upload is ' + progress + '% done');
+			  switch (snapshot.state) {
+				case firebase.storage.TaskState.PAUSED: // or 'paused'
+				  console.log('Upload is paused');
+				  break;
+				case firebase.storage.TaskState.RUNNING: // or 'running'
+				  console.log('Upload is running');
+				  break;
+			  }
+			}, function(error) {
+			  // Handle unsuccessful uploads
+			}, function() {
+			  // Handle successful uploads on complete
+			  // For instance, get the download URL: https://firebasestorage.googleapis.com/...
+			  var downloadURL = uploadTask.snapshot.downloadURL;
+			});
+		}
+		
+	</script>
+	</head>
+	<input type="file" onchange="uploadImage()"><br>
+<img src="" height="200" alt="Image preview...">
+
+	
+</html>

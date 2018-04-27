@@ -1,0 +1,184 @@
+<html>
+	<script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.11.0/firebase-firestore.js"></script>
+	<script src="js/config.js"></script>
+	<script src="js/db.js"></script>
+	
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Yayshesaidyes</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Developed by Team 1" />
+	<meta name="keywords" content="wedding, couple, marriage, services" />
+	<meta name="author" content="Team 1 - Titus" />
+	
+	<script>
+		var writeTestimonial=function(){
+		var name=document.getElementById("name").value
+		var description=document.getElementById("description").value
+		writeTestimonialData(name, description)
+		}
+	</script>
+	<!-- <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,300,600,400italic,700' rel='stylesheet' type='text/css'> -->
+	<link rel="icon" type="image/png" href="images/logo.png"/>
+	<!-- Animate.css -->
+	<link rel="stylesheet" href="css/animate.css">
+	<!-- Icomoon Icon Fonts-->
+	<link rel="stylesheet" href="css/icomoon.css">
+	<!-- Bootstrap  -->
+	<link rel="stylesheet" href="css/bootstrap.css">
+
+	<!-- Magnific Popup -->
+	<link rel="stylesheet" href="css/magnific-popup.css">
+
+	<!-- Theme style  -->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<link href="https://fonts.googleapis.com/css?family=GFS+Didot" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <nav class="navbar navbar-inverse">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse-4">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.html">Yayshesaidyes!</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="navbar-collapse-4">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+
+                    <ul class=" nav navbar-nav nav-collapse slide-down" role="search" >
+
+                        <li class="dropdown">
+                            <a href="#" class="dropdown-toggle btn btn-default btn-outline btn-circle collapsed" data-toggle="dropdown" role="button" aria-expanded="false">Profile </a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li id="logregister"><a href="signin.html">Sign In</a></li>
+                                <li id="logregister1"><a href="signup.html">Register</a></li>
+                                <li id="logout"><a href="signin.html" onclick="logout()">Logout</a></li>
+                                <li id="logout1"><a href="view_cart.html" >My Plans</a></li>
+                                <li id="vendor_service"><a href="vendor_reg.html" >Submit Service</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <li id="loggedin"><a href="signup.html">Profile</a></li>
+                </ul>
+
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+    </nav><!-- /.navbar -->
+	<body>
+	<div class="container">
+	<div class="row">
+		<div class="col-xs-12 col-md-6">
+			<div id="cupid">
+			<center>
+				<img src="images/testimonial.gif"></img>
+				<p style="color:black">We love you more than you love your best half. Thanks for choosing us!</p>
+			
+			</center>
+		</div>
+		</div>
+		<div class="col-xs-12 col-md-6 vendor_reg">
+		<div class="jumbotron">
+			<div class="form">
+		<h3><center>Testimonial<center></h3>
+		
+		<div class="form-group">
+		
+		  <label for="name">Name</label>
+			<input type="text" id="name" placeholder="John Doe" class="form-element">
+		  
+		</div>
+		<div class="form-group">
+		
+		  <label for="description">Testimonial</label>
+		  
+			<textarea id="description" class="form-element" style="height:70px;"></textarea>
+		
+		</div>
+		<div class="form-group">
+		
+		
+		  
+			<p id="success_msg" style="color:green" class="form-element"></p>
+		
+		</div>
+		<button class="btn btn-lg btn-primary btn-block signup-btn" type="submit" onclick="writeTestimonial()">Submit</button>
+		
+	</div>
+	</div>
+		
+	</div>
+	</div>
+	<div class="gototop js-top">
+		<a href="#" class="js-gotop"><i class="icon-arrow-up"></i></a>
+	</div>
+	<footer id="fh5co-footer" role="contentinfo">
+		<div class="container">
+			<div class="row row-pb-md">
+				<div class="col-md-4 fh5co-widget">
+					<h3>The Company</h3>
+					<p>Yayshesaidyes.com is a one-stop wedding planner solution for all those couples who wish to plan their dream wedding without getting bogged down by running around to arrange for services like catering, photography</p>
+					<p><a href="about.html">Learn More</a></p>
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<ul class="fh5co-footer-links">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="contact.html">Contact</a></li>
+
+
+					</ul>
+				</div>
+
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1">
+					<ul class="fh5co-footer-links">
+
+						<li><a href="services.html">Services</a></li>
+						<li><a href="work.html">Testimonials</a></li>
+
+					</ul>
+				</div>
+				<div class="col-md-2 col-sm-4 col-xs-6 col-md-push-1" id="container3">
+
+					<img style="width:150%; float:right" src="./images/logo.gif" alt="Cupid"  loop="infinite" >
+
+
+
+				</div>
+
+
+			</div>
+
+			<div class="row copyright">
+				<div class="col-md-12 text-center">
+					<p>
+						<small class="block">&copy; Developed by Team 1.</small>
+
+					</p>
+					<p>
+					<ul class="fh5co-social-icons">
+						<li><a href="#"><i class="icon-twitter"></i></a></li>
+						<li><a href="#"><i class="icon-facebook"></i></a></li>
+						<li><a href="#"><i class="icon-linkedin"></i></a></li>
+
+					</ul>
+					</p>
+				</div>
+			</div>
+
+		</div>
+	</footer>
+</div>
+</body>
+	</html>
